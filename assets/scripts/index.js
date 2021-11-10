@@ -44,7 +44,7 @@ function choiceHowToSort(i, j, arr, symbol) {
         // Si el simbolo es el de menor, llamo a la funcion que ordena de menor a mayor
         lowestToHighest(i, j, arr);
     }
-    if (symbol == ">") {
+    else {
         // Si el simbolo es el de mayor, llamo a la funcion que ordena de mayor a menor
         highestToLowest(i, j, arr);
     }
@@ -98,14 +98,16 @@ function assignLetter(myArray, dni, letter) {
         if (letter == myArray[rest]) {
             return "El número y la letra del DNI indicados son correctos.";
         }
-        else return "La letra indicada es incorrecta.";
+        return "La letra indicada es incorrecta.";
     }
-    else return "El numero proporcionado no es válido.";
+    return "El numero proporcionado no es válido.";
 }
 
 // La funcion devuelve true si cumple las condiciones, sino, devuelve false
 function isNumberOk(num) {
     if (num > 0 && num < 99999999) return true;
-    else return false;
+    return false;
 }
-//console.log(assignLetter(letrasDNI,55123456,'X'));
+
+// ↓ Des-comentar para utilizar la funcion 
+//console.log(assignLetter(letrasDNI,55123456,'T'));
